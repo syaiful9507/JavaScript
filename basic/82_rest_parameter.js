@@ -13,9 +13,18 @@ function sum(name, ...data) {
         //console.log(item);
         total += item;
     }
-    console.log('total ' + name + ' is ' + total );
+    console.log('total ' + name + ' is ' + total);
 }
 
-sum('Orange', 1,2,3,6,7,8);
-sum('Apple', 5,5,6,7,5,6);
-sum('Banana', 9,5,2,3,4);
+sum('Orange', 1, 2, 3, 6, 7, 8);
+sum('Apple', 5, 5, 6, 7, 5, 6);
+sum('Banana', 9, 5, 2, 3, 4);
+
+function oldSum() {
+    let total = 0;
+    for (const item of arguments) {
+        total += total;
+    }
+    console.log(total);
+}
+oldSum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
