@@ -20,10 +20,10 @@ sum('Orange', 1, 2, 3, 6, 7, 8);
 sum('Apple', 5, 5, 6, 7, 5, 6);
 sum('Banana', 9, 5, 2, 3, 4);
 
-function oldSum() {
+function oldSum(...arguments) {
     let total = 0;
     for (const item of arguments) {
-        total += total;
+        total += item;
     }
     console.log(total);
 }

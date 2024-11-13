@@ -12,15 +12,15 @@
  */
 
 //Without "with statement"
-const name = {
+const Personname = {
     firstName: "SYAIFUL",
     lastName: "Abizar",
 }
-console.log(name.firstName);
-console.log(name.lastName);
+console.log(Personname.firstName);
+console.log(Personname.lastName);
 
 //Use "with statement"
-with(name){
+with(Personname){
     console.log("==WITH STATEMENT==");
     console.log(firstName);
 }
@@ -29,7 +29,7 @@ with(name){
 
 const firstName = "Wulan";
 const lastName = "Indah";
-with (name){
+with (Personname){
     console.log(firstName); //harapannya ingin wulan
     console.log(lastName); //niatnya ingin indah
 }

@@ -13,3 +13,11 @@ function sayHello(x, y, z) {
     console.log(z);
 }
 sayHello("syaiful");
+
+function sayHello2(x = 4, y = 5, z = 6){ //ada parameter default , ketika function dipaggil dan dimasukkan value yang baru, maka value dafault akan berubah.
+    console.log(x);
+    console.log(y);
+    console.log(z);
+}
+
+sayHello2(10);

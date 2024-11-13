@@ -7,7 +7,7 @@
  */
 
 function sayHello(firsName, lastName){
-    console.log(lastName, lastName);
+    console.log(firsName, lastName);
 }
 
 sayHello("SYAIFUL", "ABIZAR");

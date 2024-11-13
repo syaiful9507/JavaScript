@@ -39,7 +39,7 @@ console.log("hello" && ''); // ''
 console.log("" && []); // ""
 console.log("0" && "NOL"); // "NOL"
 console.log(0 && "NOL"); // 0
-console.log(null && "NULL"); // NULL
-console.log(undefined && "UNDEFINED"); // UNDEFINED
+console.log(null && "NULL"); // null
+console.log(undefined && "UNDEFINED"); // undefined
 console.log("undefined" && "null"); // null
 
