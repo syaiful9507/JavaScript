@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alias in Module</title>
+</head>
+<body>
+<script type="module">
+  import {companyName, companyClass,sum as total} from "./alias.mjs";
+  const sum = total(100,35);
+  console.log(sum);
+</script>
+</body>
+</html>

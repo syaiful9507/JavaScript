@@ -23,13 +23,13 @@ function withoutUseStrictMode(){
 }
 withoutUseStrictMode();
 
-function useStrictMode(){
-    'use strict';
-    const person = {
-        firstName: "ABIZAR",
-    };
-    with (person){
-        console.log(firstName);
-    }
-}
-useStrictMode();
+// function useStrictMode(){
+//     'use strict';
+//     const person = {
+//         firstName: "ABIZAR",
+//     };
+//     with (person){
+//         console.log(firstName);
+//     }
+// }
+// useStrictMode();

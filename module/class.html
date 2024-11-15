@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class di Module</title>
+</head>
+<body>
+<script type="module">
+  import {Person, sum} from "./class.mjs";
+
+  const person = new Person("SYAIFUL");
+  person.sayHello("Abizar");
+  let cal = sum(10,20);
+  console.log(cal);
+</script>
+</body>
+</html>

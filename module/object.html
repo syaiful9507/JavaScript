@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module Object</title>
+</head>
+<body>
+<script type="module">
+    import * as data from "./object.mjs";
+
+    console.info(data.firstName);
+    console.info(data.middleName);
+    console.info(data.lastName);
+    data.hello();
+    const person = new data.Person();
+    console.info(person.name);
+</script>
+</body>
+</html>
