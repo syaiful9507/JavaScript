@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>SAY HI</h1>
+<p>Hello</p>
+<img src="https://miro.medium.com/v2/resize:fit:1400/1*N0nCoCroTdO1sbidcH1Xpw.png" style="width: 500px" alt="od" id="img-id">
+<div>
+    <p id="tulisan">HI, ini adalah tulisan</p>
+</div>
+<ul id="menu">
+    <li id="first">First</li>
+    <li id="second">Second</li>
+    <li id="third">Third</li>
+</ul>
+<div id="container" class="box" data-info="example"></div>
+
+</body>
+<script>
+    let doc = document.body;
+    console.log(doc);
+    console.info(document);
+    console.info(document.title);
+    console.info(document.head);
+    console.info(document.images);
+    console.info(document.contentType);
+    const tulisan = document.getElementById("tulisan");
+    console.info(tulisan);
+    const menu = document.getElementById("menu");
+    console.info(menu);
+    console.info(menu.children);
+    const second = document.getElementById("second");
+    console.info(second);
+    console.info(second.previousSibling);
+    console.info(second.nextSibling);
+    const img = document.getElementById("img-id");
+    console.info(img.getAttribute("src"));
+    const altimg = img.setAttribute("alt", "Image edit alt");
+    console.info(img.alt);
+
+    let container = document.getElementById("container");
+    console.info(container.attributes);
+    for (let i = 0; i < container.attributes.length; i++){
+        console.info(container.attributes[i].value);
+    }
+</script>
+</html>
