@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload File </title>
+</head>
+<body>
+<form>
+  <label for="username">
+    Username :
+    <input type="text" name="username" id="username">
+  </label>
+  <br>
+  <label for="name">
+    Name :
+    <input type="text" name="name" id="name">
+  </label>
+  <br>
+  <label for="profile">
+    Profile :
+    <input type="file" name="profile" id="profile">
+  </label>
+  <input type="button" id="register" value="Register" >
+  <input type="hidden" value="Proses">
+
+
+</form>
+<script>
+  function doRegister(){
+    const ajax = new XMLHttpRequest();
+    ajax.open("POST", "https://test-ajax.free.beeceptor.com");
+    ajax.onload = function (){
+      console.info(ajax.responseText);
+    }
+    const form = new FormData();
+    form.append("username", document.getElementById("username").value);
+    form.append("name", document.getElementById("name").value);
+    form.append("profile", document.getElementById("profile").value);
+    ajax.send(form);
+  }
+
+  document.getElementById("register").onclick = doRegister;
+</script>
+</body>
+</html>

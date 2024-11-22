@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fetch API</title>
+</head>
+<body>
+<form>
+  <label for="username">
+    Username :
+    <input type="text" name="username" id="username">
+  </label>
+  <br>
+  <label for="password">
+    Password :
+    <input type="password" name="password" id="password">
+  </label>
+  <br>
+  <input type="button" id="login" value="Login" >
+  <input type="hidden" value="Proses">
+
+
+</form>
+<script>
+
+  /**
+   * Membuat Request
+   */
+  // function doLogin(){
+  //   const request = new Request("https://test-api-syaiful.free.beeceptor.com", {
+  //     method: "POST",
+  //     headers:{
+  //       "Content-Type" : "application/json",
+  //       "Accept" : "application/json",
+  //     },
+  //     body : JSON.stringify({
+  //       name : document.getElementById("username").value,
+  //       username: document.getElementById("password").value,
+  //     })
+  //   });
+  //
+  //   // Promise<Response>
+  //   const response = fetch(request);
+  //   console.info(response);
+  // }
+
+  /**
+   * Fetch API Tanpa Object Request
+   */
+  function doLogin(){
+    const request = fetch("https://test-api-syaiful.free.beeceptor.com", {
+      method: "POST",
+      headers:{
+        "Content-Type" : "application/json",
+        "Accept" : "application/json",
+      },
+      body : JSON.stringify({
+        name : document.getElementById("username").value,
+        username: document.getElementById("password").value,
+      })
+    });
+
+    const request2 = fetch("https://jsonplaceholder.typicode.com/comments");
+
+    request2.then((data)=> {
+      console.info(data);
+    }).catch((error)=>{
+      console.info(error);
+    })
+
+  }
+
+  document.getElementById("login").onclick = doLogin;
+</script>
+
+</body>
+</html>

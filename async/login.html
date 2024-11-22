@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login with AJAX</title>
+</head>
+<body>
+<form>
+  <label for="username">
+    Username :
+    <input type="text" name="username" id="username">
+  </label>
+  <br>
+  <label for="password">
+    Password :
+    <input type="password" name="password" id="password">
+  </label>
+  <br>
+  <input type="button" id="login" value="Login" >
+  <input type="hidden" value="Proses">
+
+
+</form>
+<script>
+function doLogin(){
+  const ajax = new XMLHttpRequest();
+  ajax.open("POST","https://test-fe.free.beeceptor.com");
+  ajax.onload = function (){
+    console.info(ajax.responseText);
+    data = JSON.parse(ajax.responseText);
+    console.info(data['about']);
+
+  }
+  ajax.setRequestHeader('Content-Type', 'application/json');
+  ajax.send(JSON.stringify({
+    username : document.getElementById("username").value,
+    password : document.getElementById("password").value,
+  }));
+
+}
+document.getElementById("login").onclick = doLogin;
+
+</script>
+</body>
+</html>
